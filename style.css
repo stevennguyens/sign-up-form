@@ -2,11 +2,16 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Prompt', 'Helvetica', sans-serif;
 }
 
 :root {
-    --basic-grey: rgb(223, 222, 222);
+    --basic-white: rgb(245, 245, 245);
+    --basic-grey: rgb(234, 234, 234);
     --basic-dark-grey: rgb(48, 48, 48);
+    --border-sign-up: 1px solid rgb(233, 233, 233);
+    --light-blue: rgb(81, 107, 165);
+    --dark-blue: rgb(47, 64, 97);
 }
 
 .container {
@@ -53,16 +58,22 @@
 .sign-up {
     width: 100%;
     max-height: 100%;
-    background-color: var(--basic-grey);
+    background-color: var(--basic-white);
     display: flex;
     flex-direction: column;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .top {
-    background-color: red;
     flex: 1 1 0;
     display: flex;
     align-items: flex-end;
+    margin-left: 30px;
+}
+
+.top .header {
+    color: var(--basic-dark-grey);
 }
 
 .mid {
@@ -72,11 +83,21 @@
     justify-content: center;
 }
 
+.mid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(253, 253, 253);
+    height: 80%;
+    padding: 30px;
+    border-radius: 10px;
+    border: var(--border-sign-up);
+}
+
 .text-container {
     color: var(--basic-dark-grey);
-    font-family: 'Prompt', 'Helvetica', sans-serif;
     display: flex;
-    padding: 10px 10px 10px 30px;
+    padding: 10px 10px 10px 0px;
 }
 
 .text-container label {
@@ -91,29 +112,60 @@
     display: flex;
     flex-direction: column;
     margin-right: 50px;
-    width: 25%;
+    width: 35%;
 }
 
 .text-container input {
-    padding: 5px;
+    padding: 7px;
     border-radius: 3px;
-    border: 1px solid rgb(192, 192, 192);
+    border: var(--border-sign-up);
+    outline: none;
 }
 
 .text-container input:focus {
-    
+    border: 1px solid var(--basic-dark-grey);
 }
 
 .bot {
-    background-color: yellow;
     flex: 1 1 0;
+    margin-left: 30px;
 }
 
-.top .text {
+.mid .text {
     color: var(--basic-dark-grey);
-    font-family: 'Prompt', 'Helvetica', sans-serif;
     font-weight: 600;
     font-size: 1.2rem;
-    padding: 30px;
+    padding-bottom: 20px;
 }
 
+.btn {
+    color: white;
+    background-color: var(--light-blue);
+    border: none;
+    border-radius: 7px;
+    padding: 12px 30px;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--dark-blue);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+}
+
+.bot p {
+    color: var(--basic-dark-grey);
+    font-size: .9rem;
+    padding-top: 20px;
+}
+
+.log-in {
+    color: var(--light-blue);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.log-in:hover {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
